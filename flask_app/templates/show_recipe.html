@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <title>Recipe Share</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1 class="display-1">Welcome {{session['first_name']}}</h1>
+            </div>
+            <div class="col-6 d-flex justify-content-sm-evenly">
+                <a href="/dashboard">Back to Recipes</a>
+                <a href = "/clear">logout</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h2 class="h2">{{recipe.name}}</h1>
+            </div>
+            <div class="col-6 d-flex justify-content-sm-evenly">
+                <h3 class="fs-2">Posted by: {{recipe.creator.first_name}}</h3>
+            </div>
+        </div>
+            <div class="col d-flex justify-content-sm-evenly">
+                <p>Description</p>
+                <p>{{recipe.description}}</p>
+            </div>
+            <div class="col d-flex justify-content-sm-evenly">
+                <p>Under 30 min?</p>
+                <p>{{recipe.under}}</p>
+            </div>
+            <div class="col d-flex justify-content-sm-evenly">
+                <p>Instructions</p>
+                <p>{{recipe.instructions}}</p>
+            </div>
+            <div class="col d-flex justify-content-sm-evenly">
+                <p>Date Made</p>
+                <p>{{recipe.date_made}}</p>
+        </div>
+        
+    </div>
+</body>
+</html>
